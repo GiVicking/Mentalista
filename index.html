@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Mentalista</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <main>
+      <section class="mentalist">
+        <br>
+        
+        <p class="message">Advinhe o número que estou pensando.</p>
+        <div class="header">
+          <br>
+        <input type="button" class='restartButton' onclick="restartGame()" value="Recomeçar">
+        </div>
+   
+        <input class='attemptButton' name ="attemptButton" disabled>
+        <p class="message-two"><strong>Tentativas Restantes!</strong> </p>
+        <form name='screen'> 
+          <input class="display" name='display'disabled>
+        </form>
+        <input type="button" class='tip-button' onclick="numberTest(0)" value="0">
+        <input type="button" class='tip-button' onclick="numberTest(1)" value="1">
+        <input type="button" class='tip-button' onclick="numberTest(2)" value="2">
+        <input type="button" class='tip-button' onclick="numberTest(3)" value="3">
+        <input type="button" class='tip-button' onclick="numberTest(4)" value="4">
+        <input type="button" class='tip-button' onclick="numberTest(5)" value="5">
+        <input type="button" class='tip-button' onclick="numberTest(6)" value="6">
+        <input type="button" class='tip-button' onclick="numberTest(7)" value="7">
+        <input type="button" class='tip-button' onclick="numberTest(8)" value="8">
+        <input type="button" class='tip-button' onclick="numberTest(9)" value="9">
+        <input type="button" class='tip-button' onclick="numberTest(10)" value="10">
+        <input type="button" class='tip-button' onclick="numberTest(11)" value="11">
+        <input type="button" class='tip-button' onclick="numberTest(12)" value="12">
+        <input type="button" class='tip-button' onclick="numberTest(13)" value="13">
+        <input type="button" class='tip-button' onclick="numberTest(14)" value="14">
+        <input type="button" class='tip-button' onclick="numberTest(15)" value="15">
+        <input type="button" class='tip-button' onclick="numberTest(16)" value="16">
+        <input type="button" class='tip-button' onclick="numberTest(17)" value="17">
+        <input type="button" class='tip-button' onclick="numberTest(18)" value="18">
+        <input type="button" class='tip-button' onclick="numberTest(19)" value="19">
+        <input type="button" class='last-tip-button' onclick="numberTest(20)" value="20">
+        <p class="copyrigth"><strong>By &#128155; Gislaine Carvalho</strong></p>
+      </section>
+
+
+<script>
+
+// Variável que gera o número a ser advinhado
+var secretNumber = parseInt(Math.random()*20);
+// Variável que determina o número máximo de tentativas permitidas
+var attempts = 5;
+// Variável que declara a máxima pontuaçaõ
+var score = 100;
+// Mensagens que podem ocorrer durante o jogo
+var initialMessage = "Clique no número...";
+var moreMessage = "Errou! O número é maior. Perdeu 20 pontos";
+var lessMessage = "Errou! O número é menor. Perdeu 20 pontos";
+// Carregamento dos displays
+document.querySelector('.display').value = initialMessage;
+document.querySelector('.attemptButton').value = attempts;
+// Função responsável por verificar o acerto do número
+function numberTest(number) {
+  var tip = number;
+  if (tip == secretNumber && attempts >= 1) {
+    document.querySelector('.display').value =  "Parabéns, você acertou! Sua pontuação foi " + score + ".";
+    attempts = 0;
+  } else if (tip > secretNumber && attempts > 1) {
+    document.querySelector('.display').value = lessMessage;
+    attempts = attempts - 1;
+    score = score - 20;
+    document.querySelector('.attemptButton').value = attempts;
+  } else if (tip < secretNumber && attempts > 1) {
+    document.querySelector('.display').value = moreMessage;
+    attempts = attempts - 1;
+    score = score - 20;
+    
+    document.querySelector('.attemptButton').value = attempts;
+  } else if (tip != secretNumber && attempts == 1) {
+    document.querySelector('.display').value = "Você perdeu! O número certo era " + secretNumber + ".";
+    attempts = 0;
+    document.querySelector('.attemptButton').value = attempts;
+    
+  }
+}
+// Função responsável por reiniciar o jogo
+function restartGame() {
+  secretNumber = parseInt(Math.random()*20);
+  attempts = 5;
+  score = 100;
+  document.querySelector('.attemptButton').value = attempts;
+  document.querySelector('.display').value = initialMessage;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+  background-image: url("./mulher\ maravilha.jpeg");
+  min-height: 400px;
+  background-color: black;
+  background-position: center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  }
+
+.mentalist {
+  margin-top: 2px;
+  width: 42.5rem;
+  margin: 0.10rem auto 0 auto;
+	border-radius: 30px;
+}
+.display {
+ font-family: 'Secular One';
+	font-size: 2rem;
+	padding: 1.5rem;
+  margin-top: 10px;
+	color: black;
+  width: 43.5rem;
+  border: 0 solid;
+}
+
+.message {
+ top: 5px;
+margin: 0;
+  font-family: 'Secular One';
+	font-size: 2.1rem;
+  color: white;
+}
+
+.message-two {
+  font-family: 'Secular One';
+	font-size: 2.25rem;
+	right: 10px;
+  line-height: 4 px;
+	color:white;
+}
+
+.tip-button {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0 0 1rem;
+  font-family: 'Secular One';
+	color: black;
+  background-color: orange;
+   opacity: 30px;
+	font-size: 2.5rem;
+	text-align: center;
+  vertical-align: center;
+	transition: 150ms;
+  border: 0 solid;
+	border-radius: 15px;
+}
+
+.last-tip-button {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0 1rem 1rem;
+  font-family: 'Secular One';
+	color: black;
+	background-color:orange;
+	font-size: 2.5rem;
+	text-align: center;
+  vertical-align: center;
+	transition: 150ms;
+  border: 0 solid;
+	border-radius: 15px;
+}
+
+.attemptButton {
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 1rem 2rem 2.5rem;
+  font-family: 'Secular One';
+	color: white;
+	background-color: transparent;
+  font-size: 2.5rem;
+	text-align: center;
+  vertical-align: center;
+  border: 0 solid;
+	border-radius: 15px;
+}
+
+.restartButton {
+  width: 11.5rem;
+  height: 4.5rem;
+  text-shadow: 2px 2px 4px;
+  margin-right: 10px;
+font-family: 'Secular One';
+	color: black;
+	background-color: orange;
+	font-size: 2rem;
+	text-align: center;
+  vertical-align: center;
+  border: 0 solid;
+	border-radius: 15px;
+  transition: 100ms;
+}
+
+.tip-button:hover,.last-tip-button:hover {
+  background:white;
+}
+
+.restartButton:hover {
+  background: orange;
+}
+.copyrigth {
+  text-align: center;
+  font-family: 'Secular One';
+	color: white;
+ margin: 0;
+ margin-bottom: 10px;
+ }
+@import url(tiny.css) (min-width:200px);
+@import url(small.css) (min-width:300px);
+@import url(big.css) (min-width:900px);
+
+@media screen and (max-width: 200px) {
+ /* estilos */
+}
+@media screen and (max-width: 600px) {
+}
