@@ -2,9 +2,10 @@
 ![SElo](https://img.shields.io/github/languages/top/GiVicking/Mentalista)
 # Mentalista
 
+Temos aqui um projeto simples para a prática do Java Script. 
 
-Nesse projeto , temos um joguinho ,você pode digitar um número.
-Você tem  três chanches de acertos. 
-Não acertando você retorna ao principio
+Nesse jogo o usuário pode digitar um número , ele tem cinco chances de acertos.
+
+Não acertando ele retorna ao início. 
 
 ![Página Inicial Mentalista](https://github.com/GiVicking/Mentalista/blob/main/Projeto%20final.jpeg)
